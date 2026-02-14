@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>I love you my little baby Khaoula 💘</title>
+  <style>
+    :root{
+      --bg1:#0b0b14; --bg2:#1a0b1f;
+      --pink:#ff4d8d; --red:#ff2d55;
+      --glass: rgba(255,255,255,.10);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color:white; overflow:hidden;
+      background:
+        radial-gradient(1200px 800px at 15% 20%, rgba(255,77,141,.22), transparent 55%),
+        radial-gradient(900px 650px at 80% 35%, rgba(255,45,85,.18), transparent 55%),
+        linear-gradient(120deg, var(--bg1), var(--bg2));
+    }
+    .stars{
+      position:fixed; inset:0;
+      background-image:
+        radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,.25) 60%, transparent 61%),
+        radial-gradient(1px 1px at 80px 120px, rgba(255,255,255,.18) 60%, transparent 61%),
+        radial-gradient(1.5px 1.5px at 240px 90px, rgba(255,255,255,.16) 60%, transparent 61%);
+      background-size: 260px 180px;
+      opacity:.55;
+      animation: drift 18s linear infinite;
+      pointer-events:none;
+    }
+    @keyframes drift{to{transform:translate3d(-260px,-180px,0)}}
+
+    .wrap{position:relative;height:100%;display:grid;place-items:center;padding:24px}
+    .card{
+      width:min(720px, 92vw);
+      padding:28px 26px;
+      border-radius:24px;
+      background: linear-gradient(180deg, var(--glass), rgba(255,255,255,.06));
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow: 0 18px 60px rgba(0,0,0,.45);
+      backdrop-filter: blur(10px);
+      text-align:center;
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float{50%{transform:translateY(-10px)}}
+
+    .badge{
+      display:inline-flex;gap:10px;align-items:center;
+      padding:10px 14px;border-radius:999px;
+      background: rgba(255,77,141,.16);
+      border:1px solid rgba(255,77,141,.25);
+      font-weight:600;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background: var(--pink);
+      box-shadow: 0 0 18px rgba(255,77,141,.9);
+      animation: blink 1.2s ease-in-out infinite;
+    }
+    @keyframes blink{50%{transform:scale(1.25); opacity:.65}}
+
+    h1{
+      margin:18px 0 6px;
+      font-size: clamp(34px, 5vw, 52px);
+      line-height:1.05;
+      letter-spacing:-.8px;
+      text-shadow: 0 10px 40px rgba(255,77,141,.25);
+    }
+    .pulse{display:inline-block;animation:pulse 1.25s ease-in-out infinite}
+    @keyframes pulse{50%{transform:scale(1.06)}}
+    .sub{
+      margin:10px auto 18px; max-width:56ch;
+      font-size: clamp(15px, 2.2vw, 18px);
+      opacity:.92; color: rgba(255,255,255,.88);
+    }
+    .name{
+      display:inline-block;padding:6px 10px;border-radius:12px;
+      background: rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      font-weight:700;
+    }
+    .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+    button{
+      cursor:pointer;border:none;
+      padding:12px 16px;border-radius:14px;
+      font-weight:700;color:white;
+      background: linear-gradient(135deg, var(--pink), var(--red));
+      box-shadow: 0 16px 38px rgba(255,45,85,.28);
+      transition: transform .15s ease, filter .2s ease;
+    }
+    button:hover{transform: translateY(-2px); filter:brightness(1.05)}
+    button:active{transform: translateY(0px); filter:brightness(.98)}
+    .ghost{
+      background: rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow:none;
+    }
+
+    .envelope{
+      width:min(420px, 88vw);
+      margin:22px auto 0;
+      position:relative;height:220px;
+      border-radius:22px;
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.12);
+      overflow:hidden;
+    }
+    .env-top{
+      position:absolute; inset:0;
+      background: linear-gradient(135deg, rgba(255,77,141,.18), rgba(255,45,85,.10));
+      clip-path: polygon(0 0, 100% 0, 50% 54%);
+      transform-origin: 50% 0%;
+      transition: transform .7s cubic-bezier(.2,.9,.2,1);
+    }
+    .env-bottom{
+      position:absolute; inset:0;
+      clip-path: polygon(0 100%, 100% 100%, 50% 44%);
+      background: linear-gradient(135deg, rgba(255,255,255,.10), rgba(255,255,255,.04));
+    }
+    .letter{
+      position:absolute; left:50%; top:16px;
+      transform: translateX(-50%);
+      width:86%; height:78%;
+      border-radius:18px;
+      background: linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,.07));
+      border:1px solid rgba(255,255,255,.14);
+      padding:18px;
+      box-shadow: 0 18px 60px rgba(0,0,0,.22);
+      transition: transform .8s cubic-bezier(.2,.9,.2,1);
+      text-align:left;
+    }
+    .letter h2{margin:0 0 8px;font-size:20px}
+    .letter p{margin:0;opacity:.92;line-height:1.5;font-size:15.5px}
+    .footer{margin-top:14px;opacity:.65;font-size:13px;text-align:center}
+    .open .env-top{ transform: rotateX(180deg); }
+    .open .letter{ transform: translateX(-50%) translateY(-18px); }
+
+    .heart{
+      position:fixed; top:-30px; left:0;
+      font-size:18px; opacity:.85;
+      filter: drop-shadow(0 6px 16px rgba(255,77,141,.35));
+      animation: fall linear forwards;
+      pointer-events:none; user-select:none;
+    }
+    @keyframes fall{
+      to{transform: translateY(110vh) rotate(360deg); opacity:0;}
+    }
+
+    .modal{
+      position:fixed; inset:0; display:none; place-items:center;
+      background: rgba(0,0,0,.55); padding:22px;
+    }
+    .modal.show{display:grid}
+    .modal-card{
+      width:min(520px, 92vw);
+      border-radius:22px;
+      background: linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.07));
+      border:1px solid rgba(255,255,255,.14);
+      padding:18px 18px 14px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 18px 70px rgba(0,0,0,.55);
+      text-align:left;
+    }
+    .modal-card h3{margin:0 0 8px}
+    .modal-card p{margin:0 0 12px; opacity:.9; line-height:1.55}
+    .tiny{opacity:.75; font-size:13px}
+    .type{
+      display:inline-block;
+      border-right: 2px solid rgba(255,255,255,.7);
+      padding-right:4px;
+      animation: caret .8s step-end infinite;
+    }
+    @keyframes caret{50%{border-color:transparent}}
+
+    .hint{
+      margin-top:10px;
+      opacity:.7;
+      font-size:12.5px;
+    }
+    audio{display:none;}
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+
+  <div class="wrap">
+    <div class="card">
+      <div class="badge"><span class="dot"></span> Happy Valentine’s Day 💌</div>
+
+      <h1><span class="pulse">I love you</span> <span id="herName" class="name">❤️</span></h1>
+
+      <p class="sub">
+        I coded this little place just for you… because
+        <span id="typed" class="type"></span>
+      </p>
+
+      <div class="row">
+        <button id="btnOpen">Open the letter 💖</button>
+        <button class="ghost" id="btnSurprise">Surprise ✨</button>
+        <button class="ghost" id="btnMusic">Guess the music🔥🎵</button>
+      </div>
+
+     
+
+      <audio id="song" src="fire-on-fire.mp3" preload="auto"></audio>
+
+      <div class="envelope" id="envelope">
+        <div class="env-top"></div>
+        <div class="env-bottom"></div>
+        <div class="letter">
+          <h2>For you 💖</h2>
+          <p id="letterText">
+            I love you.<br><br>
+            You are my gift in this life, and I’m truly grateful to have you.<br><br>
+            One day, when I have money, I will bring you the world… but until then,
+            I give you my heart, my effort, and all my love every single day. 💘
+          </p>
+          <div class="footer">— Always you & me ✨</div>
+        </div>
+      </div>
+
+      <div class="footer">Click anywhere to make more hearts appear 💞</div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-card">
+      <h3>Little secret 🤫💞</h3>
+      <p id="modalMsg"></p>
+      <p class="tiny">Click outside to close.</p>
+    </div>
+  </div>
+
+  <script>
+    const NAME = "Khaoula";
+    const SECRET_MESSAGES = [
+      "You are my favorite feeling. 💗",
+      "I choose you, again and again. 🌙💞",
+      "With you, everything feels softer. ✨",
+      "I’m proud of us. 🤍",
+      "Your smile is my favorite place. 😊💘"
+    ];
+
+    document.getElementById("herName").textContent = NAME;
+
+    // Typewriter
+    const typedEl = document.getElementById("typed");
+    const sentence = "my heart chooses you… again and again.";
+    let i = 0;
+    function typeLoop(){
+      typedEl.textContent = sentence.slice(0, i++);
+      if (i <= sentence.length) requestAnimationFrame(typeLoop);
+      else setTimeout(() => { i = 0; typeLoop(); }, 1200);
+    }
+    typeLoop();
+
+    // Hearts generator
+    function spawnHeart(burst = 1){
+      for(let k=0;k<burst;k++){
+        const h = document.createElement("div");
+        h.className = "heart";
+        h.textContent = Math.random() > 0.5 ? "💖" : "💘";
+        const size = 14 + Math.random()*22;
+        h.style.fontSize = size + "px";
+        h.style.left = (Math.random()*100) + "vw";
+        h.style.animationDuration = (3 + Math.random()*4) + "s";
+        h.style.opacity = (0.35 + Math.random()*0.6).toFixed(2);
+        document.body.appendChild(h);
+        h.addEventListener("animationend", () => h.remove());
+      }
+    }
+    setInterval(() => spawnHeart(1), 260);
+
+    // Envelope open/close
+    const env = document.getElementById("envelope");
+    const btnOpen = document.getElementById("btnOpen");
+    let opened = false;
+    btnOpen.addEventListener("click", () => {
+      opened = !opened;
+      env.classList.toggle("open", opened);
+      btnOpen.textContent = opened ? "Close the letter 💌" : "Open the letter 💖";
+      spawnHeart(12);
+    });
+
+    // Surprise modal
+    const modal = document.getElementById("modal");
+    const modalMsg = document.getElementById("modalMsg");
+    document.getElementById("btnSurprise").addEventListener("click", () => {
+      const msg = SECRET_MESSAGES[Math.floor(Math.random()*SECRET_MESSAGES.length)];
+      modalMsg.textContent = msg;
+      modal.classList.add("show");
+      spawnHeart(18);
+    });
+    modal.addEventListener("click", (e) => {
+      if(e.target === modal) modal.classList.remove("show");
+    });
+
+    // Music button: play/pause local MP3
+    const song = document.getElementById("song");
+    const btnMusic = document.getElementById("btnMusic");
+    let isPlaying = false;
+
+    btnMusic.addEventListener("click", async () => {
+      try{
+        if (!isPlaying){
+          await song.play(); // user click ✅
+          isPlaying = true;
+          btnMusic.textContent = "Pause “Fire on Fire” ⏸️🔥";
+          spawnHeart(14);
+        } else {
+          song.pause();
+          isPlaying = false;
+          btnMusic.textContent = "Play “Fire on Fire” 🔥🎵";
+        }
+      } catch (err){
+        modalMsg.textContent =
+          "Hmm, I couldn't play the music. Please make sure the file 'fire-on-fire.mp3' is in the same folder as this HTML file. 🎵❌";
+        modal.classList.add("show");
+      }
+    });
+
+    song.addEventListener("ended", () => {
+      isPlaying = false;
+      btnMusic.textContent = "Play “Fire on Fire” 🔥🎵";
+    });
+
+    // Optional: click anywhere to burst hearts
+    document.addEventListener("click", (e) => {
+      if(e.target.tagName !== "BUTTON") spawnHeart(4);
+    });
+  </script>
+</body>
+</html>
